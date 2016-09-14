@@ -3,11 +3,11 @@ package smarthouse.restapi.http.routes
 import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.server.Directives._
 import de.heikoseeberger.akkahttpcirce.CirceSupport
+import io.circe.generic.auto._
+import io.circe.syntax._
 import smarthouse.restapi.http.SecurityDirectives
 import smarthouse.restapi.models.UserEntity
 import smarthouse.restapi.services.AuthService
-import io.circe.generic.auto._
-import io.circe.syntax._
 
 import scala.concurrent.ExecutionContext
 

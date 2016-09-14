@@ -1,7 +1,7 @@
 package smarthouse.restapi.services
 
-import smarthouse.restapi.models.db.UserEntityTable
 import smarthouse.restapi.models.{UserEntity, UserEntityUpdate}
+import smarthouse.restapi.models.db.UserEntityTable
 import smarthouse.restapi.utils.DatabaseService
 
 import scala.concurrent.{ExecutionContext, Future}

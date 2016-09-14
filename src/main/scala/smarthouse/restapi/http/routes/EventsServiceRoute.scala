@@ -7,15 +7,17 @@ import io.circe.generic.auto._
 import io.circe.syntax._
 import smarthouse.restapi.http.SecurityDirectives
 import smarthouse.restapi.models.EventEntity
-import smarthouse.restapi.services.EventsService
+import smarthouse.restapi.services.{AuthService, EventsService}
 
 import scala.concurrent.ExecutionContext
 
-class EventsServiceRoute(val authService: EventsService)
+class EventsServiceRoute(val authService: AuthService,
+                         val eventService: EventsService)
                         (implicit executionContext: ExecutionContext) extends CirceSupport with SecurityDirectives {
 
   import StatusCodes._
   import authService._
+  import eventService._
 
   val route = pathPrefix("events") {
     path("all") {

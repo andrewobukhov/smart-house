@@ -1,7 +1,7 @@
 package smarthouse.restapi.services
 
-import smarthouse.restapi.models.db.TokenEntityTable
 import smarthouse.restapi.models.{TokenEntity, UserEntity}
+import smarthouse.restapi.models.db.TokenEntityTable
 import smarthouse.restapi.utils.DatabaseService
 
 import scala.concurrent.{ExecutionContext, Future}

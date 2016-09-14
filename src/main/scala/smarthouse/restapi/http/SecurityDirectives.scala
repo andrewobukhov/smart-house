@@ -1,6 +1,6 @@
 package smarthouse.restapi.http
 
-import akka.http.scaladsl.server.directives.{ RouteDirectives, BasicDirectives, HeaderDirectives, FutureDirectives }
+import akka.http.scaladsl.server.directives.{BasicDirectives, FutureDirectives, HeaderDirectives, RouteDirectives}
 import akka.http.scaladsl.server.Directive1
 import smarthouse.restapi.models.UserEntity
 import smarthouse.restapi.services.AuthService
