@@ -5,7 +5,7 @@ import akka.event.{Logging, LoggingAdapter}
 import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
 import smarthouse.restapi.http.HttpService
-import smarthouse.restapi.services.{AuthService, EventsService, UsersService}
+import smarthouse.restapi.services.{AuthService, DevicesService, EventsService, UsersService}
 import smarthouse.restapi.utils.{Config, DatabaseService, FlywayService}
 
 import scala.concurrent.ExecutionContext
@@ -25,8 +25,9 @@ object Main extends App with Config {
   val usersService = new UsersService(databaseService)
   val authService = new AuthService(databaseService)(usersService)
   val eventsService = new EventsService(databaseService)
+  val devicesService = new DevicesService(databaseService)
 
-  val httpService = new HttpService(usersService, authService, eventsService)
+  val httpService = new HttpService(usersService, authService, eventsService, devicesService)
 
   Http().bindAndHandle(httpService.routes, httpHost, httpPort)
 }
