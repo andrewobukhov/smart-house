@@ -11,6 +11,9 @@ libraryDependencies ++= {
   Seq(
     "com.typesafe.akka" %% "akka-http-core" % akkaV,
     "com.typesafe.akka" %% "akka-http-experimental" % akkaV,
+    "com.typesafe.akka" %% "akka-cluster" % akkaV,
+    "com.typesafe.akka" %% "akka-cluster-metrics" % akkaV,
+
     "de.heikoseeberger" %% "akka-http-circe" % "1.6.0",
 
     "com.typesafe.slick" %% "slick" % slickVersion,
@@ -19,6 +22,9 @@ libraryDependencies ++= {
 
     "com.zaxxer" % "HikariCP" % "2.4.5",
     "org.slf4j" % "slf4j-nop" % "1.6.4",
+
+    // Common Dependencies
+    "org.json4s" %% "json4s-jackson" % "3.2.11",
 
     "io.circe" %% "circe-core" % circeV,
     "io.circe" %% "circe-generic" % circeV,
